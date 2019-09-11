@@ -30,19 +30,19 @@ public class UserServiceImplTest {
 		System.out.println(list);
 	}
 
-	@Test
-	public void testInsertSelective() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSelectByPrimaryKey() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testUpdateByPrimaryKeySelective() {
-		fail("Not yet implemented");
-	}
+//	@Test
+//	public void testInsertSelective() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testSelectByPrimaryKey() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testUpdateByPrimaryKeySelective() {
+//		fail("Not yet implemented");
+//	}
 
 }

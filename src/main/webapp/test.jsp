@@ -11,8 +11,6 @@
 </head>
 <body>
 
-
-
 	<div class="container">
 		<div class="row" style="background-color: gray;">log 登录人</div>
 		<div class="row">
@@ -40,8 +38,6 @@
 						<td>44444</td>
 					</tr>
 				</table>
-
-
 
 			</div>
 		</div>

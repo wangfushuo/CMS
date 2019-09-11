@@ -10,7 +10,7 @@ public class ArticleServiceImplTest {
 	public void testSelects() {
 		fail("Not yet implemented");
 	}
-
+     
 	@Test
 	public void testDeleteByPrimaryKey() {
 		fail("Not yet implemented");
@@ -20,7 +20,7 @@ public class ArticleServiceImplTest {
 	public void testInsert() {
 		fail("Not yet implemented");
 	}
-
+	 
 	@Test
 	public void testInsertSelective() {
 		fail("Not yet implemented");
@@ -45,5 +45,6 @@ public class ArticleServiceImplTest {
 	public void testUpdateByPrimaryKey() {
 		fail("Not yet implemented");
 	}
+	
 
 }
