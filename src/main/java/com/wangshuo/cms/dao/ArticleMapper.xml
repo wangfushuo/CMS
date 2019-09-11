@@ -34,22 +34,24 @@
     content
   </sql>
   
+  
+<!-- 文章列表查询 -->
   <select id="selects" resultMap="BaseResultMap">
   
   slect a.*,u.username,u.nickname from cms_article a left join cms_user u 
    on a.user_id = u.id 
    
    <where>
-        <if test="channelId != 0" >
+        <if test="channelId =null and channelId != 0" >
         channel_id = #{channelId,jdbcType=INTEGER},
       </if>
-      <if test="categoryId !=0" >
+      <if test="categoryId !=null and categoryId !=0" >
         category_id = #{categoryId,jdbcType=INTEGER},
       </if>
-       <if test="userId != 0" >
+       <if test="userId !=null and userId != 0" >
         user_id = #{userId,jdbcType=INTEGER},
       </if>
-       <if test="status !=0" >
+       <if test="status !=null and status !=0" >
         status=#{status},
       </if>
    

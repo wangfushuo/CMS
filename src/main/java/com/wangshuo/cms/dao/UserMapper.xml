@@ -20,6 +20,14 @@
   
   <select id="selects" resultMap="BaseResultMap">
     select *from cms_user
+    
+    <where>
+           <if test="username!=''">
+                username like "% "#{username}" %"
+           </if>
+    
+    </where>
+    
   </select>
   
   

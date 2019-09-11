@@ -16,9 +16,6 @@
 		<div class="row">
 			<div class="col-md-3" style="background-color: red; height: 200px">33333333
 
-
-
-
 			</div>
 			<div class="col-md-9">
 				9999999
