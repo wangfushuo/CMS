@@ -16,6 +16,12 @@
     from cms_slide
     where id = #{id,jdbcType=INTEGER}
   </select>
+  
+  <select id="selects" resultMap="BaseResultMap">
+  select * from cms_slide
+  
+  </select>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from cms_slide
     where id = #{id,jdbcType=INTEGER}

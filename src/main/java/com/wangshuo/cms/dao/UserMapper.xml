@@ -9,25 +9,29 @@
     <result column="birthday" property="birthday" jdbcType="DATE" />
     <result column="gender" property="gender" jdbcType="INTEGER" />
     <result column="locked" property="locked" jdbcType="INTEGER" />
-    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
-    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="created" property="created" jdbcType="TIMESTAMP" />
+    <result column="updated" property="updated" jdbcType="TIMESTAMP" />
     <result column="role" property="role" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, username, password, nickname, birthday, gender, locked, create_time, update_time, 
-    role
+    id, username, password, nickname, birthday, gender, locked, created, updated, role
   </sql>
-  
   <select id="selects" resultMap="BaseResultMap">
-    select *from cms_user
+  select * from cms_user 
+  <where>
+    <if test="username!=''">
+    username like "%" #{username}"%"
     
-    <where>
-           <if test="username!=''">
-                username like "% "#{username}" %"
-           </if>
-    
-    </where>
-    
+    </if>
+  
+  
+  </where>
+  
+  </select>
+  
+  <select id="selectByUsername" resultMap="BaseResultMap">
+  select * from cms_user where username =#{username}
+  
   </select>
   
   
@@ -44,11 +48,11 @@
   <insert id="insert" parameterType="com.wangshuo.cms.domain.User" >
     insert into cms_user (id, username, password, 
       nickname, birthday, gender, 
-      locked, create_time, update_time, 
+      locked, created, updated, 
       role)
     values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
       #{nickname,jdbcType=VARCHAR}, #{birthday,jdbcType=DATE}, #{gender,jdbcType=INTEGER}, 
-      #{locked,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{locked,jdbcType=INTEGER}, #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP}, 
       #{role,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.wangshuo.cms.domain.User" >
@@ -75,11 +79,11 @@
       <if test="locked != null" >
         locked,
       </if>
-      <if test="createTime != null" >
-        create_time,
+      <if test="created != null" >
+        created,
       </if>
-      <if test="updateTime != null" >
-        update_time,
+      <if test="updated != null" >
+        updated,
       </if>
       <if test="role != null" >
         role,
@@ -107,11 +111,11 @@
       <if test="locked != null" >
         #{locked,jdbcType=INTEGER},
       </if>
-      <if test="createTime != null" >
-        #{createTime,jdbcType=TIMESTAMP},
+      <if test="created != null" >
+        #{created,jdbcType=TIMESTAMP},
       </if>
-      <if test="updateTime != null" >
-        #{updateTime,jdbcType=TIMESTAMP},
+      <if test="updated != null" >
+        #{updated,jdbcType=TIMESTAMP},
       </if>
       <if test="role != null" >
         #{role,jdbcType=VARCHAR},
@@ -139,11 +143,11 @@
       <if test="locked != null" >
         locked = #{locked,jdbcType=INTEGER},
       </if>
-      <if test="createTime != null" >
-        create_time = #{createTime,jdbcType=TIMESTAMP},
+      <if test="created != null" >
+        created = #{created,jdbcType=TIMESTAMP},
       </if>
-      <if test="updateTime != null" >
-        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      <if test="updated != null" >
+        updated = #{updated,jdbcType=TIMESTAMP},
       </if>
       <if test="role != null" >
         role = #{role,jdbcType=VARCHAR},
@@ -159,8 +163,8 @@
       birthday = #{birthday,jdbcType=DATE},
       gender = #{gender,jdbcType=INTEGER},
       locked = #{locked,jdbcType=INTEGER},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      created = #{created,jdbcType=TIMESTAMP},
+      updated = #{updated,jdbcType=TIMESTAMP},
       role = #{role,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>

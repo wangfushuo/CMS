@@ -1,12 +1,20 @@
 package com.wangshuo.cms.domain;
 
 import java.io.Serializable;
-
-public class Settings implements Serializable{
+/**
+ * 
+ * @ClassName: Settings 
+ * @Description: 系统设置
+ * @author: 王硕
+ * @date: 2019年9月20日 下午7:56:50
+ */
+public class Settings implements Serializable {
     /**
-	 * 
+	 * @fieldName: serialVersionUID
+	 * @fieldType: long
+	 * @Description: TODO
 	 */
-	private static final long serialVersionUID = -8052499908184534487L;
+	private static final long serialVersionUID = 3742400893314834810L;
 
 	private Integer id;
 
@@ -102,6 +110,5 @@ public class Settings implements Serializable{
 			return false;
 		return true;
 	}
-    
     
 }

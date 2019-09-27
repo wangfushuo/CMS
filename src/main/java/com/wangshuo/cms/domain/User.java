@@ -3,16 +3,33 @@ package com.wangshuo.cms.domain;
 import java.io.Serializable;
 import java.util.Date;
 
-public class User implements Serializable{
+import javax.validation.constraints.Size;
+/**
+ * 
+ * @ClassName: User 
+ * @Description: 用户
+ * @author: 王硕
+ * @date: 2019年9月18日 下午4:28:55
+ */
+public class User implements Serializable {
     /**
-	 * 
+	 * @fieldName: serialVersionUID
+	 * @fieldType: long
+	 * @Description: TODO
 	 */
-	private static final long serialVersionUID = 7795392633458424969L;
+	private static final long serialVersionUID = 3462241154491900808L;
+
+	/**
+	 * @fieldName: serialVersionUID
+	 * @fieldType: long
+	 * @Description: TODO
+	 */
 
 	private Integer id;
 
+	@Size(max = 5,min = 2,message = "用户名的长度在2-5之间")
     private String username;
-
+	@Size(max = 10,min = 6,message = "密码的长度在6-10之间")
     private String password;
 
     private String nickname;
@@ -23,9 +40,9 @@ public class User implements Serializable{
 
     private Integer locked;
 
-    private Date createTime;
+    private Date created;
 
-    private Date updateTime;
+    private Date updated;
 
     private String role;
 
@@ -85,20 +102,20 @@ public class User implements Serializable{
         this.locked = locked;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getCreated() {
+        return created;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreated(Date created) {
+        this.created = created;
     }
 
-    public Date getUpdateTime() {
-        return updateTime;
+    public Date getUpdated() {
+        return updated;
     }
 
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+    public void setUpdated(Date updated) {
+        this.updated = updated;
     }
 
     public String getRole() {

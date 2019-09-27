@@ -2,16 +2,25 @@ package com.wangshuo.cms.domain;
 
 import java.io.Serializable;
 import java.util.Date;
-
-public class Article implements Serializable{
+/**
+ * 
+ * @ClassName: Article 
+ * @Description: TODO
+ * @author: 王硕
+ * @date: 2019年9月18日 下午3:36:47
+ */
+public class Article  implements Serializable {
     /**
-	 * 
+	 * @fieldName: serialVersionUID
+	 * @fieldType: long
+	 * @Description: TODO
 	 */
-	private static final long serialVersionUID = 6618874879608322847L;
+	private static final long serialVersionUID = 8958278908046411690L;
 
 	private Integer id;
 
     private String title;
+    private String summary;
 
     private String picture;
 
@@ -33,13 +42,25 @@ public class Article implements Serializable{
 
     private Date updated;
 
-    private String content;
+    private String content;//文章内容
+    
+    private User user ;//文章发布人
+    
+    private Integer comments;
+    
+    
+    
+    
 
-    private User user;
-    
-    
-    
-    public User getUser() {
+    public String getSummary() {
+		return summary;
+	}
+
+	public void setSummary(String summary) {
+		this.summary = summary;
+	}
+
+	public User getUser() {
 		return user;
 	}
 
@@ -175,7 +196,5 @@ public class Article implements Serializable{
 			return false;
 		return true;
 	}
-    
-    
     
 }

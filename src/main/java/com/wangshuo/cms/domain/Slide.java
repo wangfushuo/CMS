@@ -1,12 +1,20 @@
 package com.wangshuo.cms.domain;
 
 import java.io.Serializable;
-
-public class Slide implements Serializable{
+/**
+ * 
+ * @ClassName: Slide 
+ * @Description: 广告
+ * @author: 王硕
+ * @date: 2019年9月20日 下午7:57:08
+ */
+public class Slide implements Serializable  {
     /**
-	 * 
+	 * @fieldName: serialVersionUID
+	 * @fieldType: long
+	 * @Description: TODO
 	 */
-	private static final long serialVersionUID = -4962153061558318729L;
+	private static final long serialVersionUID = 4772780940238382527L;
 
 	private Integer id;
 
@@ -72,6 +80,5 @@ public class Slide implements Serializable{
 			return false;
 		return true;
 	}
-    
     
 }

@@ -1,10 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
       <a class="navbar-brand mr-1" href="index.html">CMS系统后台</a>
-
       <!-- Navbar Search -->
       <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
         <div class="input-group">
@@ -30,10 +28,10 @@
             <i class="fas fa-user-circle fa-fw"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-            <a class="dropdown-item" href="#">返回网站</a>
-            <a class="dropdown-item" href="#">修改密码</a>
+            <a class="dropdown-item" href="/">返回网站</a>
+            <a class="dropdown-item" href="">修改密码</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/logout">退出</a>
+            <a class="dropdown-item" href="passport/logout">退出</a>
           </div>
         </li>
       </ul>

@@ -1,8 +1,13 @@
 package com.wangshuo.cms.dao;
 
+import java.util.List;
+
 import com.wangshuo.cms.domain.Slide;
 
 public interface SlideMapper {
+	
+	List<Slide> selects();
+	
     int deleteByPrimaryKey(Integer id);
 
     int insert(Slide record);

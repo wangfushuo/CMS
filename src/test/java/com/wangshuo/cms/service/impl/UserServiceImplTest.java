@@ -15,34 +15,31 @@ import com.github.pagehelper.PageInfo;
 import com.wangshuo.cms.domain.User;
 import com.wangshuo.cms.service.UserService;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring-beans.xml")
-public class UserServiceImplTest {
+
+public class UserServiceImplTest extends JunitParent{
 
 	@Resource
 	private UserService userService;
 	
 	@Test
 	public void testSelects() {
-	
-		PageInfo<User> info = userService.selects(null, 0, 3);
+		
+		PageInfo<User> info = userService.selects(null, 0, 3)	;
 		List<User> list = info.getList();
-		System.out.println(list);
+		
+		System.out.println(list);	
 	}
 
-//	@Test
-//	public void testInsertSelective() {
-//		fail("Not yet implemented");
-//	}
-//
-//	@Test
-//	public void testSelectByPrimaryKey() {
-//		fail("Not yet implemented");
-//	}
-//
-//	@Test
-//	public void testUpdateByPrimaryKeySelective() {
-//		fail("Not yet implemented");
-//	}
+	@Test
+	public void testInsertSelective() {
+	}
+
+	@Test
+	public void testSelectByPrimaryKey() {
+	}
+
+	@Test
+	public void testUpdateByPrimaryKeySelective() {
+	}
 
 }

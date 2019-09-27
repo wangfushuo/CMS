@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +7,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css"
 	href="/resource/css/bootstrap.min.css" />
+
 </head>
 <body>
 
@@ -15,6 +15,9 @@
 		<div class="row" style="background-color: gray;">log 登录人</div>
 		<div class="row">
 			<div class="col-md-3" style="background-color: red; height: 200px">33333333
+
+
+
 
 			</div>
 			<div class="col-md-9">
@@ -36,12 +39,14 @@
 					</tr>
 				</table>
 
+
+
 			</div>
 		</div>
 	</div>
 
 
 
-   
+
 </body>
 </html>

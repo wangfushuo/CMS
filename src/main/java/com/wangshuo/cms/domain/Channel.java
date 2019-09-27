@@ -1,12 +1,20 @@
 package com.wangshuo.cms.domain;
 
 import java.io.Serializable;
-
-public class Channel implements Serializable{
+/**
+ * 
+ * @ClassName: Channel 
+ * @Description:栏目
+ * @author: 王硕
+ * @date: 2019年9月20日 下午7:55:32
+ */
+public class Channel implements Serializable {
     /**
-	 * 
+	 * @fieldName: serialVersionUID
+	 * @fieldType: long
+	 * @Description: TODO
 	 */
-	private static final long serialVersionUID = -3141250751587238965L;
+	private static final long serialVersionUID = 3101728785416371069L;
 
 	private Integer id;
 
@@ -72,10 +80,6 @@ public class Channel implements Serializable{
 			return false;
 		return true;
 	}
-    
-    
-
-
     
     
 }

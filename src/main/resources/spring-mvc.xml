@@ -9,6 +9,10 @@
 	<!-- 扫描器 -->
 	<context:component-scan
 		base-package="com.wangshuo.cms.controller"></context:component-scan>
+
+<!-- 读取配置文件 -->
+<context:property-placeholder location="classpath:cms.properties"/>
+
 	<!-- 视图解析图 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -30,5 +34,33 @@
 		<property name="providerClass"
 			value="org.hibernate.validator.HibernateValidator"></property>
 	</bean>
-	
+
+	<!-- 配置拦截器 -->
+	<mvc:interceptors>
+		<!-- 管理员的拦截器 -->
+		<mvc:interceptor>
+			<!-- 拦截的规则 -->
+			<mvc:mapping path="/admin/**" />
+			<!-- 静态资源部拦截 -->
+			<mvc:exclude-mapping path="/resource/**" />
+			<!-- 拦截器处理类 -->
+			<bean class="com.wangshuo.cms.util.AdminInterceptor"></bean>
+
+		</mvc:interceptor>
+		
+		<!-- 注册用户的拦截器 -->
+		<mvc:interceptor>
+			<!-- 拦截的规则 -->
+			<mvc:mapping path="/my/**" />
+			<!-- 静态资源部拦截 -->
+			<mvc:exclude-mapping path="/resource/**" />
+			<!-- 拦截器处理类 -->
+			<bean class="com.wangshuo.cms.util.UserInterceptor"></bean>
+
+		</mvc:interceptor>
+
+
+
+
+	</mvc:interceptors>
 </beans>

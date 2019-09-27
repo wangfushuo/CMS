@@ -73,7 +73,7 @@
 	<aop:config>
 		<!-- 配置切点表达式 -->
 		<aop:pointcut
-			expression="execution(* com.bobo.cms.service.impl.*.*(..))" id="pointcut" />
+			expression="execution(* com.wangshuo.cms.service.impl.*.*(..))" id="pointcut" />
 		<!-- 关联事务 -->
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut" />
 
