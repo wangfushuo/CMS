@@ -29,6 +29,13 @@ import com.github.pagehelper.PageInfo;
 
 @RequestMapping("article")
 @Controller
+/**
+ * 
+ * @ClassName: ArticleController 
+ * @Description: TODO
+ * @author: 王硕
+ * @date: 2019年9月29日 下午2:03:19
+ */
 public class ArticleController {
 
 	@Resource
